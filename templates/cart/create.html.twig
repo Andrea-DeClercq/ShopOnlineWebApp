@@ -1,0 +1,19 @@
+{# templates/cart/create.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Create Cart{% endblock %}
+
+{% block body %}
+    <h1>Create Cart</h1>
+
+    {{ form_start(form) }}
+    {{ form_row(form.idUser) }}
+    {{ form_row(form.idProduct) }}
+    {{ form_row(form.quantity) }}
+    {{ form_row(form.payed) }}
+    {{ form_row(form.confirmed) }}
+    {{ form_row(form._token) }}
+
+    <button type="submit">Create Cart</button>
+    {{ form_end(form) }}
+{% endblock %}

@@ -1,0 +1,21 @@
+{# templates/country/edit.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Country{% endblock %}
+
+{% block body %}
+    <h1>Edit Country</h1>
+
+    {{ form_start(form) }}
+    {{ form_row(form.code) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.continent) }}
+    {{ form_row(form.region) }}
+    {{ form_row(form.localName) }}
+    {{ form_row(form.capital) }}
+    {{ form_row(form.code2) }}
+    {{ form_row(form._token) }}
+
+    <button type="submit">Save Changes</button>
+    {{ form_end(form) }}
+{% endblock %}

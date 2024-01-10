@@ -1,0 +1,17 @@
+{# templates/city/edit.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit City{% endblock %}
+
+{% block body %}
+    <h1>Edit City</h1>
+
+    {{ form_start(form) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.countryCode) }}
+    {{ form_row(form.district) }}
+    {{ form_row(form._token) }}
+
+    <button type="submit">Save Changes</button>
+    {{ form_end(form) }}
+{% endblock %}

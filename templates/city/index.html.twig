@@ -1,0 +1,21 @@
+{# templates/city/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}City Management{% endblock %}
+
+{% block body %}
+    <h1>City Management</h1>
+
+    <a href="{{ path('app_city_all') }}"><button>Voir la liste des ville</button></a>
+
+    <form action="{{ path('app_city_actions') }}" method="post">
+        <label for="cityId">ID de la ville:</label>
+        <input type="text" id="cityId" name="cityId" required>
+
+        <button type="submit" name="action" value="view">Voir la ville</button>
+        <button type="submit" name="action" value="edit">Editer la ville</button>
+        <button type="submit" name="action" value="delete">Supprimer la ville</button>
+    </form>
+
+    <a href="{{ path('app_city_create') }}"><button>Créer une nouvelle ville</button></a>
+{% endblock %}

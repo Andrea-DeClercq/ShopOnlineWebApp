@@ -1,0 +1,21 @@
+{# templates/country/create.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Create Country{% endblock %}
+
+{% block body %}
+    <h1>Create Country</h1>
+
+    {{ form_start(form) }}
+    {{ form_row(form.code) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.continent) }}
+    {{ form_row(form.region) }}
+    {{ form_row(form.localName) }}
+    {{ form_row(form.capital) }}
+    {{ form_row(form.code2) }}
+    {{ form_row(form._token) }}
+
+    <button type="submit">Create Country</button>
+    {{ form_end(form) }}
+{% endblock %}

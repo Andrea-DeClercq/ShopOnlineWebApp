@@ -1,0 +1,21 @@
+{# templates/country/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Country Management{% endblock %}
+
+{% block body %}
+    <h1>Country Management</h1>
+
+    <a href="{{ path('app_country_all') }}"><button>Voir la liste des pays</button></a>
+
+    <form action="{{ path('app_country_actions') }}" method="post">
+        <label for="countryId">ID du pays:</label>
+        <input type="text" id="countryId" name="countryId" required>
+
+        <button type="submit" name="action" value="view">Voir le pays</button>
+        <button type="submit" name="action" value="edit">Editer le pays</button>
+        <button type="submit" name="action" value="delete">Supprimer le pays</button>
+    </form>
+
+    <a href="{{ path('app_country_create') }}"><button>Créer un nouvel pays</button></a>
+{% endblock %}

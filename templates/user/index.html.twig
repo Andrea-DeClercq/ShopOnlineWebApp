@@ -1,0 +1,21 @@
+{# templates/user/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}User Management{% endblock %}
+
+{% block body %}
+    <h1>User Management</h1>
+
+    <a href="{{ path('app_all_user') }}"><button>Voir la liste des utilisateurs</button></a>
+
+    <form action="{{ path('app_user_actions') }}" method="post">
+        <label for="userId">ID de l'utilisateur :</label>
+        <input type="text" id="userId" name="userId" required>
+
+        <button type="submit" name="action" value="view">Voir l'utilisateur</button>
+        <button type="submit" name="action" value="edit">Editer l'utilisateur</button>
+        <button type="submit" name="action" value="delete">Supprimer l'utilisateur</button>
+    </form>
+
+    <a href="{{ path('app_user_create') }}"><button>Créer un nouvel utilisateur</button></a>
+{% endblock %}

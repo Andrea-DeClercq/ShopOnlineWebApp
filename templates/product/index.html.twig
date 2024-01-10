@@ -1,0 +1,21 @@
+{# templates/product/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Product Management{% endblock %}
+
+{% block body %}
+    <h1>Product Management</h1>
+
+    <a href="{{ path('app_product_all') }}"><button>Voir la liste des produits</button></a>
+
+    <form action="{{ path('app_product_actions') }}" method="post">
+        <label for="productId">ID du produit :</label>
+        <input type="text" id="productId" name="productId" required>
+
+        <button type="submit" name="action" value="view">Voir le produit</button>
+        <button type="submit" name="action" value="edit">Editer le produit</button>
+        <button type="submit" name="action" value="delete">Supprimer le produit</button>
+    </form>
+
+    <a href="{{ path('app_product_create') }}"><button>Créer un nouvel produit</button></a>
+{% endblock %}

@@ -1,0 +1,21 @@
+{# templates/category/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Category Management{% endblock %}
+
+{% block body %}
+    <h1>Category Management</h1>
+
+    <a href="{{ path('app_category_all') }}"><button>Voir la liste des catégorie</button></a>
+
+    <form action="{{ path('app_category_actions') }}" method="post">
+        <label for="categoryId">ID de la catégorie:</label>
+        <input type="text" id="categoryId" name="categoryId" required>
+
+        <button type="submit" name="action" value="view">Voir la catégorie</button>
+        <button type="submit" name="action" value="edit">Editer la catégorie</button>
+        <button type="submit" name="action" value="delete">Supprimer la catégorie</button>
+    </form>
+
+    <a href="{{ path('app_category_create') }}"><button>Créer une nouvelle catégorie</button></a>
+{% endblock %}

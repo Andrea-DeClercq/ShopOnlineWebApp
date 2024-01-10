@@ -1,0 +1,21 @@
+{# templates/cart/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Cart Management{% endblock %}
+
+{% block body %}
+    <h1>Cart Management</h1>
+
+    <a href="{{ path('app_carts_all') }}"><button>Voir la liste des panier</button></a>
+
+    <form action="{{ path('app_carts_actions') }}" method="post">
+        <label for="cartId">ID de le panier:</lebel>
+        <input type="text" id="cartId" name="cartId" required>
+
+        <button type="submit" name="action" value="view">Voir le panier</button>
+        <button type="submit" name="action" value="edit">Editer le panier</button>
+        <button type="submit" name="action" value="delete">Supprimer le panier</button>
+    </form>
+
+    <br><a href="{{ path('app_carts_create') }}"><button>Créer un nouveau panier</button></a>
+{% endblock %}

@@ -1,0 +1,22 @@
+{# templates/user/edit.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Create User{% endblock %}
+
+{% block body %}
+    <h1>Create User</h1>
+
+    {{ form_start(form) }}
+    {{ form_row(form.userAdress) }}
+    {{ form_row(form.userCityId) }}
+    {{ form_row(form.userEmail) }}
+    {{ form_row(form.userFname) }}
+    {{ form_row(form.userLname) }}
+    {{ form_row(form.userLoginStatus) }}
+    {{ form_row(form.userName) }}
+    {{ form_row(form.userPassword) }}
+    {{ form_row(form.userPhone) }}
+
+    <button type="submit">Save</button>
+    {{ form_end(form) }}
+{% endblock %}

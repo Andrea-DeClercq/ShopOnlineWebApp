@@ -20,5 +20,47 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
+    App\Controller\UserController:
+        autowire: true
+        autoconfigure: true
+        public: false
+        bind:
+            $client: '@http_client'
+
+    App\Controller\ProductController:
+        autowire: true
+        autoconfigure: true
+        public: false
+        bind:
+            $client: '@http_client'
+
+    App\Controller\CountryController:
+        autowire: true
+        autoconfigure: true
+        public: false
+        bind:
+            $client: '@http_client'
+
+    App\Controller\CityController:
+        autowire: true
+        autoconfigure: true
+        public: false
+        bind:
+            $client: '@http_client'
+    
+    App\Controller\CategoryController:
+        autowire: true
+        autoconfigure: true
+        public: false
+        bind:
+            $client: '@http_client'
+    
+    App\Controller\CartController:
+        autowire: true
+        autoconfigure: true
+        public: false
+        bind:
+            $client: '@http_client'
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
